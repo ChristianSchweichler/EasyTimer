@@ -1,3 +1,8 @@
+/*
+  EasyTimer.cpp - Timer Library for Arduino.
+  Created by Christian Schweichler, 2016
+*/
+
 #include "EasyTimer.h"
 #include "Arduino.h"
 
@@ -38,7 +43,7 @@ int EasyTimer::findFreeSlot() {
     return -1;
 }
 
-int EasyTimer::addTimer(long milliseconds, callback_function callback, TimerType type) {
+int EasyTimer::addTimer(unsigned long milliseconds, callback_function callback, TimerType type) {
     int slot = findFreeSlot();
     if (slot != -1) {
         timers[slot].alive = 1;

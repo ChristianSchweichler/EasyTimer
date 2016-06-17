@@ -1,3 +1,8 @@
+/*
+  EasyTimer.h - Timer Library for Arduino.
+  Created by Christian Schweichler, 2016
+*/
+
 #ifndef EasyTimer_h
 #define EasyTimer_h
 
@@ -17,18 +22,18 @@ class EasyTimer {
         
         struct timer {
             int alive = 0;
-            long milliseconds;
-            long elapsedMilliseconds;
+            unsigned long milliseconds;
+            unsigned long elapsedMilliseconds;
             callback_function callback;
             TimerType type;
         };
         
         int maxTimers;
         timer* timers;
-        long elapsedMilliseconds;
+        unsigned long elapsedMilliseconds;
         
         int findFreeSlot();            
-        int addTimer(long milliseconds, callback_function callback, TimerType type);
+        int addTimer(unsigned long milliseconds, callback_function callback, TimerType type);
               
 };
 
