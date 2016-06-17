@@ -18,7 +18,13 @@ void EasyTimer::update() {
     elapsedMilliseconds = millis();
     for(int i = 0; i < this->maxTimers; i++) {
         if (timers[i].alive) {
-            //ToDo: add code
+            if (elapsedMilliseconds - timers[i].elapsedMilliseconds >= timers[i].milliseconds) {
+                timers[i].callback();
+                timers[i].elapsedMilliseconds += timers[i].milliseconds;
+                if (timers[i].type == TIMEOUT) {
+                    timers[i].alive = 0;
+                }
+            }
         }
     }
 }
