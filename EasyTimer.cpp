@@ -1,9 +1,8 @@
 #include "EasyTimer.h"
 #include "Arduino.h"
 
-EasyTimer::EasyTimer(int numTimers) {
-    maxTimers = numTimers;
-    this.maxTimers = maxTimers;
+EasyTimer::EasyTimer(int maxTimers) {
+  this->maxTimers = maxTimers;
 }
 
 int EasyTimer::setInterval(unsigned long milliseconds, callback_function callback) {

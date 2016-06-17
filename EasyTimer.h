@@ -6,7 +6,7 @@ class EasyTimer {
     typedef void (*callback_function)();
     
     public:
-        EasyTimer(int numTimers);
+        EasyTimer(int maxTimers);
         int setInterval(unsigned long milliseconds, callback_function callback);
         int setTimeout(unsigned long milliseconds, callback_function callback);
         void update();
