@@ -10,34 +10,34 @@
 
 class EasyTimer {
 
-    typedef void (*callback_function)();
+	typedef void (*callback_function)();
             
-    public:
-        EasyTimer(int maxTimers);
-        ~EasyTimer();
-        int setInterval(unsigned long milliseconds, callback_function callback);
-        int setTimeout(unsigned long milliseconds, callback_function callback);
-        void removeTimer(int id);
-        void update();
+	public:
+		EasyTimer(int maxTimers);
+		~EasyTimer();
+		int setInterval(unsigned long milliseconds, callback_function callback);
+		int setTimeout(unsigned long milliseconds, callback_function callback);
+		void removeTimer(int id);
+		void update();
 
-    private:
+	private:
         
-        enum TimerType {INTERVAL, TIMEOUT};
+	enum TimerType {INTERVAL, TIMEOUT};
         
-        struct timer {
-            int alive = 0;
-            unsigned long milliseconds;
-            unsigned long elapsedMilliseconds;
-            callback_function callback;
-            TimerType type;
-        };
+	struct timer {
+		int alive = 0;
+		unsigned long milliseconds;
+		unsigned long elapsedMilliseconds;
+		callback_function callback;
+		TimerType type;
+	};
         
-        int maxTimers;
-        timer* timers;
-        unsigned long elapsedMilliseconds;
+	int maxTimers;
+	timer* timers;
+	unsigned long elapsedMilliseconds;
         
-        int findFreeSlot();            
-        int addTimer(unsigned long milliseconds, callback_function callback, TimerType type);
+	int findFreeSlot();            
+	int addTimer(unsigned long milliseconds, callback_function callback, TimerType type);
               
 };
 
