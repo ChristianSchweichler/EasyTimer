@@ -4,7 +4,6 @@
 */
 
 #include "EasyTimer.h"
-#include "Arduino.h"
 
 EasyTimer::EasyTimer(int maxTimers) {
   this->maxTimers = maxTimers;

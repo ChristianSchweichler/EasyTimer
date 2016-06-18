@@ -6,6 +6,8 @@
 #ifndef EasyTimer_h
 #define EasyTimer_h
 
+#include "Arduino.h"
+
 class EasyTimer {
 
     typedef void (*callback_function)();
