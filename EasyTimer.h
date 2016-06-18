@@ -14,6 +14,7 @@ class EasyTimer {
         EasyTimer(int maxTimers);
         int setInterval(unsigned long milliseconds, callback_function callback);
         int setTimeout(unsigned long milliseconds, callback_function callback);
+        void removeTimer(int id);
         void update();
 
     private:

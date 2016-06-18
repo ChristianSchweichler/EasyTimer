@@ -54,3 +54,7 @@ int EasyTimer::addTimer(unsigned long milliseconds, callback_function callback, 
     }
     return slot;
 }
+
+void EasyTimer::removeTimer(int id) {
+    timers[id].alive = 0;
+}
