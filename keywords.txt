@@ -1,0 +1,5 @@
+EasyTimer	KEYWORD1
+setInterval	KEYWORD2
+setTimeout	KEYWORD2
+update		KEYWORD2
+removeTimer	KEYWORD2
