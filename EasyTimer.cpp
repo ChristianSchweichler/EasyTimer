@@ -58,3 +58,7 @@ int EasyTimer::addTimer(unsigned long milliseconds, callback_function callback, 
 void EasyTimer::removeTimer(int id) {
     timers[id].alive = 0;
 }
+
+EasyTimer::~EasyTimer() {
+    delete[] timers;
+}
